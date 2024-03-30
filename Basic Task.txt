@@ -1,0 +1,1851 @@
+Q1. Accept two number and print its remainder==>%
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int mod=a%b;
+	System.out.println(mod);
+	}
+}
+================================================================
+Q2. Accept two number and print quotient ==>/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	float div=(float)a/b;
+	System.out.println(div);
+	}
+}
+====================================================================
+Q3. Accept a number and print it’s square==>*
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int sqr=a*a;
+	System.out.println(sqr);
+	}
+}
+=============================================================
+Q4. Accept 5 number and do the sum of it.==>
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int sum=0;
+	Scanner sc=new Scanner(System.in);
+	/*int a=sc.nextInt();
+	  int b=sc.nextInt();
+	  int c=sc.nextInt();
+	  int d=sc.nextInt();
+	  int e=sc.nextInt();					
+	  int sum=a+b+c+d+e;
+	  System.out.println(sum);*/
+
+	for(int i=1;i<=5;i++){
+	    int a=sc.nextInt();
+	    sum=sum+a;
+	}
+		System.out.println(sum);
+	}
+}
+==================================================================
+Q5. Accept a character and print it on screen==>
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int sum=0;
+	Scanner sc=new Scanner(System.in);
+	char ch=sc.next().charAt(0);
+	System.out.print(ch);
+	}
+}
+===========================================================
+Q6. Accept a [capital] character and add 32 in it and print it.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int sum=0;
+	Scanner sc=new Scanner(System.in);
+	char ch=sc.next().charAt(0);
+	int b= (int)ch + 32;
+	
+	System.out.print((char)b);
+	}
+}
+==================================================================
+Q7. Accept a character and print its ascii value==>
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int sum=0;
+	Scanner sc=new Scanner(System.in);
+	char ch=sc.next().charAt(0);
+	int b= (int)ch;
+	
+	System.out.print(b);
+	}
+}
+===================================================================
+Q8. Accept a decimal value and print its’s whole number eg input 2.57  O/P=2==>type cast
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int sum=0;
+	Scanner sc=new Scanner(System.in);
+	float a=sc.nextFloat();
+	int b= (int)a;
+	
+	System.out.print(b);
+	}
+}
+======================================================================================
+Q9. Accept a decimal value and print its decimal part eg. Input 2.57 O/P 0.57==>-
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+	Scanner sc=new Scanner(System.in);
+	float a=sc.nextFloat();
+	float b= a-(int)a;
+	
+	System.out.printf("%.2f",b);
+	}
+}
+===================================================================================
+
+Q10. Accept a number and print it’s next value[use one memory block]==>++a
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	System.out.print(++a);
+	}
+}
+=================================================================================
+Q11. Accept a character and print it’s next character[use one memory block]
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	char ch=sc.next().charAt(0);
+	System.out.print(++ch);
+	}
+}
+================================================================================
+Q13. Accept a salary and deduct 10% from it and print netsalary[salary-10% tds].==>
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	  System.out.print ("Enter the salary: ");
+	float salary = sc.nextInt ();
+	//float netsalary=(float)(((salary*90)/100));
+	  System.out.print ("Enter the decuct %: ");
+	float deduct = sc.nextFloat ();
+	float tds = (float) (deduct * salary) / 100;
+	float netSalary = (float) salary - tds;
+	  System.out.print ("Salary after 10% ducuction =" + netSalary);
+  }
+}
+===============================================================================================
+Q14. Accept a number and print its previous number eg input 5 out put 4 [use one memory block]==>--a
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Number");
+	int a=sc.nextInt();
+	System.out.print(--a);
+	}
+}
+===============================================================================================
+Q15. Accept a number and print its cube.==>*
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Number");
+	int a=sc.nextInt();
+	int cube=a*a*a;
+	System.out.println(cube);
+	}
+}
+===============================================================================================
+Day 1
+ If Else
+Q2.	Accept three no and find out the highest  no.
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	int num1 = sc.nextInt ();
+	int num2 = sc.nextInt ();
+	int num3 = sc.nextInt ();
+	if(num1==num2&&num2==num3){
+	    System.out.println("ALl Number are Equal");
+	    System.exit(0);
+	}
+	if (num1 > num2)
+	  {
+		if (num1 > num3)
+		  {
+			System.out.println (num1 + "is greater");
+		  }
+		else
+		  {
+			System.out.println (num3 + "is greater");
+		  }
+	  }
+	else if (num2 > num3)
+	  {
+		if (num2 > num1)
+		  {
+			System.out.println (num2 + "is greater");
+		  }
+		else
+		  {
+			System.out.println (num3 + "is greater");
+		  }
+	  }
+	  else
+		{
+          System.out.println(num3+"is greater");
+		}
+  }
+
+}
+---------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	System.out.println("Enter Num1 Num2 Num3");
+	int num1 = sc.nextInt ();
+	int num2 = sc.nextInt ();
+	int num3 = sc.nextInt ();
+	if(num1==num2&&num2==num3){
+	    System.out.println("ALl Number are Equal");
+	    System.exit(0);
+	}
+	if(num1>num2){
+	    	if(num1>num3){
+	    	    System.out.println ( " num1 is greater ="+num1 );
+	    	}
+	    	else{
+	    	    System.out.println (  " num3 is greater ="+num3);
+	    	}
+	}
+	else{
+	    if(num2>num3){
+	        System.out.println ( "num2 is greater ="+num2 );
+	    }
+	    else{
+	        System.out.println ("num3 is greater ="+num3 );
+	    }
+	}
+  }
+ }  
+
+===============================================================================================
+Q3.	Accept a year from user check if it is leap year or not
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int year=sc.nextInt();
+	if((year%400==0)||(year%4==0&&year%100!=0)){
+	    System.out.println("leap year");
+	}
+	else{
+	    System.out.println(" not leap year");
+	}
+//	System.out.print((year%400==0)||(year%4==0&&year%100!=0)?"leap year":"not leap year");
+	}
+}
+
+
+=====================================================================================================
+
+Q4.	Accept a character from user and reverse the case eg. Input   aout put   A
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	char ch=sc.next().charAt(0);
+	if(ch>=97&&ch<=122){
+	    int Small=(int)ch - 32;
+	    System.out.println((char)Small);
+	}
+	else if(ch>=65&&ch<=90){
+	    int Small=(int)ch+ 32;
+	    System.out.println((char)Small);
+	}
+	else{
+	    System.out.println("Enter VAlid Charector");
+	}
+
+	}
+
+
+===============================================================================================
+
+Q5.	Accept a character from user and check if it is vowel or not
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+        System.out.print("Enter Charector");
+	char ch=sc.next().charAt(0);
+	if((ch>=65&&ch<=90)||(ch>=97&&ch<=122)){
+	    if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+	        System.out.println(ch+" "+"is vovel");
+	    }
+	    else{
+	    System.out.println(ch+" "+"Not Vovel");
+	        
+	    }
+	}
+	    
+	else{
+	    System.out.println("Enter VAlid Charector");
+	}
+	}
+}
+/*
+System.out.println(((ch>=65&&ch<=90)||(ch>=97&&ch<=122)?((ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')||(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')? ch+" "+"is vovel":ch+" "+"is Not Vovel"):"Enter VAlid Charector"));
+	*/
+	}
+}
+
+
+==============================================================================================
+
+Q6.	Accept a marks from user and print it’s grade
+a.	Mks>=75  grade A
+b.	Mks>=55 grade B
+c.	Mks>=35 grade c
+d.	Else fail
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+       int mrk=sc.nextInt();
+        if(mrk>=75){
+            System.out.print("grade A");
+        }
+        else if(mrk>=55){
+             System.out.print("grade B");
+        }
+         else if(mrk>=35){
+             System.out.print("grade C");
+        }
+        else{
+            System.out.print("Fail");
+        }
+        
+    }
+}
+===================================================================================================================
+
+Q7.	Accept a number from user - if it is divisible by 3 print “three” , if it is divisible by 7 print “seven” and if it is divisible by both(3,7) print “three -seven”
+ 
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int number =sc.nextInt();
+        if(number%3==0&&number%7==0){
+            System.out.print("three -seven");
+        }
+        else if (number%3==0){
+            System.out.print("three");
+        }
+         else if (number%7==0){
+            System.out.print("seven"); 
+        }
+        else{
+            System.out.print("Enter valid Number"); 
+        }
+            
+    }
+}
+===================================================================================================
+
+Q9.	Accept a number from user check if it is odd or even number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int number=sc.nextInt();
+	if((number%2==0)){//without Modular (number/2*2==number)
+	    System.out.println("even");
+	}
+	
+	else{
+	    System.out.println("odd");
+	}
+	}
+}
+===================================================================================================
+
+Q10.	Enter sex m/f  and salary- if m-salary>8000 tax is 5% of salary else 2%if f-salary>5000 tax is 3% else tax is 1% find a net salary=salary-tax
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	System.out.println("Enter Gender");
+    String Gender=sc.next();
+    System.out.println("Enter MaleSalary");
+    float MaleSalary=sc.nextInt();
+    System.out.println("Enter FemaleSalary");
+    int FemaleSalary=sc.nextInt();
+    if(ch=='m'{
+if(MaleSalary>8000){
+        float tax=5;
+        tax= (float)(tax*MaleSalary)/100;
+       float netSalary=MaleSalary-tax;
+       System.out.println("Male Netsalary"+"="+netSalary);
+     }
+     else{
+        float tax=2;
+        tax= (float)(tax*MaleSalary)/100;
+       float netSalary=MaleSalary-tax;
+       System.out.println("Male Netsalary"+"="+netSalary);
+     }
+    else
+{if(FemaleSalary>5000){
+        float tax=3;
+        tax= (float)(tax*FemaleSalary)/100;
+       float netSalary=FemaleSalary-tax;
+       System.out.println("Female Netsalary"+"="+netSalary);
+     }
+     else{
+        float tax=1;
+        tax= (float)(tax*FemaleSalary)/100;
+       float netSalary=FemaleSalary-tax;
+       System.out.println("Female Netsalary"+"="+netSalary);
+     }
+    
+ }
+}
+
+==============================================================================================
+
+Q11.	Accept 3 digit number from user and do the sum of its digit .(do not use any loop)
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int number=sc.nextInt();
+	if(number>99&&number<1000){
+	    int r1=number%10;
+	    number/=10;
+	    int r2=number%10;
+	    number/=10;
+	    int r3=number%10;
+	    number/=10;
+	    System.out.println(r1+r2+r3);
+	}
+	else{
+	    System.out.println("Enter valid Number");
+	}
+	}
+}
+=============================================================================================================
+
+Q13.	Problem: Given the length of four sides determine whether they can be used to create a polygon and determine if that polygon is a square. A polygon can be created if no single side is greater than the sum of the other three sides. Display a ONE when the status (polygon or square) is confirmed and ZERO when the status cannot be confirmed.
+
+Example Execution #1:
+Enter the length of the four sides: 4 3 2 9
+Length of sides: 4, 3, 2, 9
+Polygon status: 1
+Square status: 0
+
+Example Execution #2:
+Enter the length of the four sides: 5 5 5 5
+Length of sides: 5, 5, 5, 5
+Polygon status: 1
+Square status: 1
+
+Example Execution #3:
+Enter the length of the four sides: 84 25 20 15
+Length of sides: 84, 25, 20, 15
+Polygon status: 0
+Square status: 0
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the length of the four sides:");
+	int side1=sc.nextInt();
+	int side2=sc.nextInt();
+	int side3=sc.nextInt();
+	int side4=sc.nextInt();
+	System.out.println("Length of Side ="+side1+" "+side2+" "+side3+" "+side4);
+	if(side1 <=side2 + side3 + side4 && side2 <= side1 + side3 + side4 && side3 <= side1 + side2 + side4 && side4 <= side1 + side2 + side3)
+          {
+                    System.out.println("Polygon ststus="+ 1);
+          }
+        else{
+             System.out.println("Polygon ststus="+ 0);
+         } 
+        if(side1 == side2 && side2 == side3 && side3 == side4)
+        {
+            System.out.println("square ststus="+ 1);
+        }
+    else{
+        System.out.println("square ststus="+ 0);
+    }
+	}
+}
+================================================================================================================
+USING fUNCTION METHOD 
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	  System.out.println ("Enter the length of the four sides:");
+	int side1 = sc.nextInt ();
+	int side2 = sc.nextInt ();
+	int side3 = sc.nextInt ();
+	int side4 = sc.nextInt ();
+	  System.out.println ("Length of Side =" + side1 + " " + side2 + " " +
+						  side3 + " " + side4);
+	int PolygonStatus = Status.Polygon (side1, side2, side3, side4) ? 1 : 0;
+	  System.out.println ("PolygonStatus =" + PolygonStatus);
+	int SquareStatus = Status.Square (side1, side2, side3, side4) ? 1 : 0;
+	  System.out.println ("SquareStatus =" + SquareStatus);
+  }
+}
+class Status
+{
+  public static boolean Polygon (int side1, int side2, int side3, int side4)
+  {
+	return side1 <= side2 + side3 + side4 && side2 <= side1 + side3 + side4
+	  && side3 <= side1 + side2 + side4 && side4 <= side1 + side2 + side3;
+  }
+  public static boolean Square (int side1, int side2, int side3, int side4)
+  {
+	return side1 == side2 && side2 == side3 && side3 == side4;
+  }
+}
+
+========================================================================================================
+DAY 2
+LOOPS / Using FUNCTION
+========================================================================================================
+
+Q1.Accept 10 number user and do sum of it.(do not use array)
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Range");
+        int no=sc.nextInt();
+        int r=SumSolution.PrintSum(no);
+        System.out.println("Sum"+"= "+r);
+    }
+}
+class SumSolution{
+    public static int PrintSum(int no){
+        System.out.println("Enter Numbers ");
+        int sum=0;
+        Scanner sc=new Scanner(System.in);
+        for(int i=1;i<=no;i++){
+            int n=sc.nextInt();
+            sum+=n;//sum=sum+n;
+        }
+        return sum;
+    }    
+}
+==========================================================================================================
+
+Q2.Accept a number from user and find a factorial of a number
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Number");
+        int no=sc.nextInt();
+        if(no<0){
+            System.out.println("Their is no Factorial for Negative Number ");
+        }
+        else{
+        int r=FactSolution.PrintFact(no);
+        System.out.println("Factorial of Number is "+"= "+r);
+        }
+    }
+}
+class FactSolution{
+    public static int PrintFact(int no){
+        int fact=1;
+        for(int i=1;i<=no;i++){
+            fact*=i;//sum=sum+n;
+        }
+        return fact;
+    }    
+}
+
+============================================================================================
+
+Q3.	Accept 10 number from user count how many are  positive ,negative , zero
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Range"); 
+        int n =sc.nextInt();
+        Solution.PNZNumber(n);
+    }
+}
+class Solution{
+    public static void PNZNumber(int n){
+       int Pcount=0,Ncount=0,Zcount=0;
+         Scanner sc=new Scanner(System.in);
+         for(int i=1;i<=n;i++){
+             int no =sc.nextInt();
+             if(no<0){
+                 Ncount++;
+             }
+             else if(no>0){
+                 Pcount++;
+             }
+             else{
+                 Zcount++;
+             }
+         }
+         System.out.print("Positive Count = "+Pcount);
+         System.out.print("Negative Count = "+Ncount);
+         System.out.print("Zero Count = "+Zcount);
+    }
+}
+================================================================================================
+
+Q4.	Accept a number from user  and do sum of digit
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int no =sc.nextInt();
+        int r=Solution.PrintSum(no);
+        System.out.println(r);
+    }
+}
+class Solution{
+    public static int PrintSum(int no){
+         int num=no,sum=0;
+        while(num!=0){
+            int remainder=num%10;
+           sum+=remainder; //sum=sum+remainder;
+            num/=10;
+        }
+        return sum;
+    }
+    }
+
+=====================================================================================================
+
+Q5.	Accept a number from user and reverse it.
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int no =sc.nextInt();
+        int r=Solution.PrintReverse(no);
+        System.out.println(r);
+    }
+}
+class Solution{
+    public static int PrintReverse(int no){
+         int num=no,rev=0;
+        while(num!=0){
+            int remainder=num%10;
+           rev=rev*10+remainder; 
+            num/=10;
+        }
+        return rev;
+    }
+    }
+==================================================================================================
+
+Q6.	Accept a number from user and check if it is palindrome number or not eg (121)
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int no =sc.nextInt();
+        int r=Solution.PrintPalintrom(no);
+        if(r==no){
+           System.out.println(r +" is paintrom"); 
+        }
+        else{
+             System.out.println(r +" is not palintrom");
+        }
+    }
+}
+class Solution{
+    public static int PrintPalintrom(int no){
+         int num=no,rev=0;
+        while(num!=0){
+            int remainder=num%10;
+           rev=rev*10+remainder; 
+            num/=10;
+        }
+        return rev;
+    }
+    }
+========================================================================================
+
+Q. Print all Palintrom Number between 100 to 500
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        
+       for(int num=100;num<=500;num++){
+          int r= Solution.PrintPalintrom(num);
+           if(r==num){
+               System.out.println(num+"is palintrom");
+           }
+        }
+        
+    }
+}
+class Solution{
+    public static int PrintPalintrom(int num){
+         int no=num,rev=0;
+           while(no!=0){
+            int remainder=no%10;
+           rev=rev*10+remainder; 
+            no/=10;
+        }
+        if(rev==num){
+          return rev; 
+        }
+        return rev;
+    }
+    }
+==============================================================================================
+
+Q7.	Accept a number from user and print a table of that number
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Number");
+        int number=sc.nextInt();
+        for(int i=1,Mul;i<=10;i++)
+        {
+             Mul=number*i;
+            System.out.println(number+"*"+i+"="+Mul+"\t");
+        }
+        
+    }
+}
+==============================================================================================
+
+Q8.	Accept a number from user check if it is special number or not
+a.	Eg.145 
+b.	1! =1
+c.	4!=1*2*3*4
+d.	5!=1*2*3*4*5  sum of it(1+24+120=145)
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Number");
+        int number=sc.nextInt();
+        if(isSpecial(number)){
+            System.out.println(number+" ="+"is Special Number");
+        }
+        else{
+             System.out.println(number+" ="+"is Not Special Number");
+        }
+    }
+    public static boolean isSpecial(int number){
+        int n=number,sum=0;
+        while(number!=0){
+            int fact=1;
+            int remainder=number%10;
+            for(int i=1; i<=remainder;i++){
+                fact*=i;
+            }
+            sum=sum+fact;
+            number/=10;
+        }
+        return sum==n;
+    }
+}
+==============================================================================================
+
+Q9.	Accept a number from user and check if it is armstrong number or not
+a.	Eg 153
+b.	1 cube
+c.	5 cube
+d.	3 cube   sum of it (1+27+125=153)
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Number");
+        int number=sc.nextInt();
+        if(isArmstrong(number)){
+            System.out.println(number+" ="+"is Armstrong Number");
+        }
+        else{
+             System.out.println(number+" ="+"is Not Armstrong Number");
+        }
+    }
+    public static boolean isArmstrong(int number){
+        if(number<0){
+            System.out.println("Enter Valid Number");
+            return false;
+        }
+        int n=number,sum=0;
+        while(number!=0){
+            int remainder=number%10;
+            //sum=sum+remainder*remainder*remainder;
+            sum+=(int)Math.pow(remainder,3);
+            number/=10;
+        }
+        return sum==n;
+    }
+}
+
+==============================================================================================
+
+Q10. Go on accepting number from user till user enter 0 and do sum of it.*
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter numbers");
+        int sum=0;
+        while(true){
+            
+            int Number=sc.nextInt();
+            if(Number==0){
+                break;
+            }
+            sum+=Number;
+        }
+        System.out.println(sum);
+    }
+}
+
+==============================================================================================
+
+Q11.	Accept a number from user and print next 5 numbers.
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter numbers");
+        int Number=sc.nextInt();
+            for(int i=1;i<=5;i++){
+                Number++;
+                System.out.println(Number);
+            }
+    }
+}
+
+==============================================================================================
+
+Q12.	Accept a number from user and print that many numbers after the number.
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter numbers");
+        int Number=sc.nextInt();
+            for(int i=1;i<=Number;i++){
+                int NextNum=Number+i;
+                System.out.println(NextNum);
+            }
+    }
+}
+
+==============================================================================================
+Q13.	Accept start and end range from user and print  all even number between them. (two answer)
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Start Range:");
+        int Start=sc.nextInt();
+        System.out.println("Enter End Range:");
+        int End=sc.nextInt();
+            for(int S=Start;S<=End;S++){
+                if(S<=0||End<=0){
+                    System.out.print("Enter Valid Range");
+                    System.exit(0);
+                }
+                if(S%2==0)
+                System.out.println(S);
+            }
+    }
+}
+
+==============================================================================================
+
+Q14.	Accept start and end range from user and print  all odd number between them. (two answer)
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	  System.out.println ("Enter Start Range:");
+	int Start = sc.nextInt ();
+	  System.out.println ("Enter End Range:");
+	int End = sc.nextInt ();
+	  System.out.println ("Range Between " + Start + " to " + End + ':');
+	for (int S = Start; S <= End; S++)
+	  {
+		if (S < 0 || End <= 0)
+		  {
+			System.out.print ("Enter Valid Range");
+			System.exit (0);
+		  }
+
+		if (S % 2 != 0)
+		    System.out.println (S);
+	  }
+  }
+}
+
+==============================================================================================
+
+Q15.	Accept term from user and print Fibonacci series*
+        Output- 0 1 1 2 3 5 8 13
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	int a=0,b=1,c,t=8;
+	System.out.print(a+" "+b+" ");
+	for(int i=1;i<=t-2;i++){
+	    c=a+b;
+	    System.out.print(c+" ");
+	    a=b;
+	    b=c;
+	}
+  }
+}
+*******************************************************
+
+Assignment 
+
+Print Fibonacci Series in Pattern 
+1
+1 2
+3 5 8
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	int a=0,b=1,c;
+	//System.out.print(a+" "+b+" ");
+	for(int i=1;i<=3;i++){
+	    for(int j=1;j<=i;j++){
+	        if(i==1){
+	            System.out.print(b);
+	            continue;
+	        }
+	    c=a+b;
+	    System.out.print(c+" ");
+	    a=b;
+	    b=c;
+	    }
+	    System.out.println();
+	}
+  }
+}
+
+*********************************************************
+Print Fibonacci Series Between 25 to 80
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	int a = 0, b = 1, c = 0;
+	while (true)
+	  {
+		if (c >= 80)
+		  {
+			break;
+		  }
+		c = a + b;
+		a = b;
+		b = c;
+		if (c >= 25 && c <= 80)
+		  {
+			System.out.print (c + " ");
+
+		  }
+
+	  }
+  }
+}
+Output- 34 55
+
+==============================================================================================
+
+Q16.	Accept two number from user and print it’s LCM*
+         
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        
+        Scanner sc=new Scanner(System.in);
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        Lcm(num1,num2);
+    }
+    public static void Lcm(int num1,int num2){
+        int temp;
+        if(num1<num2){
+            temp=num1;
+            num1=num2;
+            num2=temp;
+        }
+        if(num1%num2==0){
+            System.out.println("LCM = "+num1);
+        }
+        else{
+            for(int i=2;i<=num2;i++){
+                temp=num1*i;
+                if(temp%num2==0){
+                    break;
+                }
+                System.out.print(temp);
+            }
+        }
+    }
+} 
+
+==============================================================================================
+
+
+
+==============================================================================================
+DAY 3
+NESTED LOOPS
+==============================================================================================
+
+Q1.	Print  all special number between 1 to 200000
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+       // System.out.println("Enter Number");
+        //int number=sc.nextInt();
+        for(int number=1;number<=200000;number++){
+        if(isSpecial(number)){
+            System.out.println(number+" ="+"is Special Number");
+        }
+        /*else{
+             System.out.println(number+" ="+"is Not Special Number");
+        }*/
+        }    
+    }
+    public static boolean isSpecial(int number){
+        int n=number,sum=0;
+        while(number!=0){
+            int fact=1;
+            int remainder=number%10;
+            for(int i=1; i<=remainder;i++){
+                fact*=i;
+            }
+            sum=sum+fact;
+            number/=10;
+        }
+        return sum==n;
+    }
+}
+==============================================================================================
+
+Q2.	Print  all Armstrong number between 100 to 999
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	for (int number = 1; number <= 999; number++)
+	  {
+		if (isArmstrong (number))
+		  {
+			System.out.println (number + " =" + "is Armstrong Number");
+		  }
+	  }
+  }
+  public static boolean isArmstrong (int number)
+  {
+	if (number < 0)
+	  {
+		System.out.println ("Enter Valid Number");
+		return false;
+	  }
+	int n = number, sum = 0;
+	while (number != 0)
+	  {
+		int remainder = number % 10;
+		//sum=sum+remainder*remainder*remainder;
+		sum += (int) Math.pow (remainder, 3);
+		number /= 10;
+	  }
+	return sum == n;
+  }
+}
+==============================================================================================
+
+
+Q3.	Accept a number from user and print table till that number vartically 
+a.	Input 2
+b.	o/p 
+c.	
+1*1=1
+1*2=2
+1*3=3
+1*4=4
+1*5=5
+1*6=6
+1*7=7
+1*8=8
+1*9=9
+1*10=10
+
+2*1=1
+2*2=4
+2*3=6
+2*4=8
+2*5=10
+2*6=12
+2*7=14
+2*8=16
+2*9=18
+2*10=20
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Number");
+        int number=sc.nextInt();
+        for(int i=1;i<=number;i++)
+        {
+            for(int j=1,Mul;j<=10;j++){
+             Mul=j*i;
+            System.out.println(i+"*"+j+"="+Mul+"\t");
+                
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+=================================================================================
+
+Q4.	Accept a number from user and print table till that number 
+       input 2 
+a.	o/p
+
+1*1=1	2*1=2	
+1*2=2	2*2=4	
+1*3=3	2*3=6	
+1*4=4	2*4=8	
+1*5=5	2*5=10	
+1*6=6	2*6=12	
+1*7=7	2*7=14	
+1*8=8	2*8=16	
+1*9=9	2*9=18	
+1*10=10	2*10=20	
+
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Number");
+        int number=sc.nextInt();
+        for(int i=1;i<=10;i++)
+        {
+            for(int j=1,Mul;j<=number;j++){
+             Mul=j*i;
+            System.out.print(j+"*"+i+"="+Mul+"\t");
+                
+            }
+            System.out.println();
+        }
+        
+    }
+}
+=============================================================================================
+* PATTERNS
+
+1
+12
+123
+
+public class pattern{
+    public static void main(String [] args){
+       for(int i=1;i<=3;i++){
+        for(int j=1;j<=i;j++){
+            System.out.print(j);
+        }
+        System.out.println();
+       }
+    }
+}
+-----------------------------------------------------------------------------------
+
+1
+22
+333
+
+public class pattern{
+    public static void main(String[] args){
+        for(int i=1;i<=3;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+---------------------------------------------------------------------------------------
+  1
+ 2 2
+3 3 3
+
+public class pattern{
+    public static void main(String[] args){
+        for(int i=1;i<=3;i++){
+            for(int s=i;s<=3;s++){
+            System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print(i+" ");
+            }
+            System.err.println();
+        }
+    }
+}
+---------------------------------------------------------------------------------------------
+1
+23
+456
+
+public class pattern{
+    public static void main(String[] args){
+        int n=1;
+        for(int i=1;i<=3;i++){
+            for(int j=1;j<=i;j++){
+
+                System.out.print(n++);
+            }
+            System.err.println();
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+  1
+ 12
+123
+
+public class pattern{
+    public static void main(String[] args){
+
+        for(int i=1;i<=3;i++){
+            for(int s=i;s<3;s++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+
+                System.out.print(j);
+            }
+            System.err.println();
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------
+1
+21
+321
+
+public class pattern{
+    public static void main(String[] args){
+
+        for(int i=1;i<=3;i++){
+            for(int j=i;j>=1;j--){
+
+                System.out.print(j);
+            }
+            System.err.println();
+        }
+    }
+}
+-------------------------------------------------------------------------------------------
+  1
+ 121
+12321
+
+public class pattern{
+    public static void main(String[] args){
+
+        for(int i=1;i<=3;i++){
+            for(int s=i;s<3;s++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            for(int r=i-1;r>=1;r--){
+                System.out.print(r);
+            }
+            System.err.println();
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------
+   1
+  121
+ 12321
+  121
+   1
+--------------------------------------------------------------------------------------------------
+
+    0
+   101
+  21012
+ 3210123
+
+
+public class pattern{
+    public static void main(String[] args){
+        for(int i=0;i<=3;i++){
+            for(int s=1;s<4-i;s++){
+                System.out.print(" ");
+            }
+            for(int j=i;j>=0;j--){
+                System.out.print(j);
+            }
+            for(int r=1;r<=i;r++){
+                System.out.print(r);
+            }
+            System.out.println();
+        }
+    }
+}
+=============================================================================================
+
+Q8.	 Accept a number from user and check if it is prime number or not
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	  System.out.println ("Enter number");
+	int num = sc.nextInt ();
+	      int count =0;
+	 
+	for (int i = 2; i <= num / 2; i++)
+	  {
+		if (num % i == 0)
+		  {
+            count++;
+		    break;
+		  }
+          }
+          if(count==0){
+            System.out.println (num +" is prime Number");
+        }
+        else{
+          System.out.println (num +" is not prime Number");
+	  }
+  }
+}
+  
+
+
+================================================================================================
+
+Q10.	Print all prime number between 51 to 100
+
+* WITHOUT FUNCTION
+
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[] args)
+  {
+	Scanner sc = new Scanner (System.in);
+	  System.out.println ("Enter Start");
+	int Start = sc.nextInt ();
+	  System.out.println ("Enter End");
+	int End = sc.nextInt ();
+    System.out.println("prime number between "+Start+" to "+End);
+	for (int num = Start; num <= End; num++)
+	  {
+	      int count =0;
+	 if(num>1){
+	 for (int i = 2; i <= num / 2; i++)
+	  {
+		if (num % i == 0)
+		  {
+		    count++;
+            break;
+		  }
+	  }
+	 }
+		  if(count==0){
+		      System.out.println (num);
+		  }
+	  
+  }
+  
+}
+}
+
+--------------------------------------------------------------
+USING FUNCION
+
+import java.util.*;
+public class Maine
+{
+  public static void main (String[]args)
+  {
+	Scanner sc = new Scanner (System.in);
+	  System.out.println ("Enter Start");
+	int Start = sc.nextInt ();
+	  System.out.println ("Enter End");
+	int End = sc.nextInt ();
+	for (int num = Start; num <= End; num++)
+	  {
+		if (isprime (num))
+		  {
+			System.out.print (num);
+		  }
+
+	  }
+  }
+  public static boolean isprime (int num)
+  {
+	if (num < 1)
+	  {
+		return false;
+	  }           //i<=Math.sqrt(num);
+	for (int i = 2; i <= num / 2; i++)
+	  {
+		if (num % i == 0)
+		  {
+			return false;
+		  }
+	  }
+	return true;
+  }
+}
+
+==========================================================================================
+
+Q12.	Accept a number from user and print that many prime number after the number
+
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int isprime;
+        System.out.println("enter number");
+       int num=sc.nextInt();
+       int newnum=num+1;
+       int count=0;
+       System.out.println("next numbers:");
+       while(count<num){
+           if(newnum>1){
+               isprime=1;
+                    // i<=Math.sqrt(newnum);
+           for(int i=2;i<=newnum/2;i++){
+               if(newnum%i==0){
+                   isprime=0;
+                   break;
+               }
+           }
+           
+             if(isprime==1){
+                 count++;
+                 System.out.println(newnum);
+             }
+             newnum++;
+           }
+       }
+    }
+}
+
+========================================================================================================
+
+2
+3 5
+7 11 13
+
+==========================================================================================================Q 12321 
+  12 21 
+  1   1
+    
+class Pattern{
+    public static void main(String[] args) {
+       for(int i=3;i>=1;i--){
+           for(int j=1;j<=i;j++){
+               System.out.print(j);
+           }
+           for(int s=i;s<3;s++){
+               System.out.print(" ");
+           }
+           for(int m=i;m>=1;m--){
+               if(m<3)
+               { 
+                   if(i==1)
+                       System.out.print(" ");
+                   
+                   System.out.print(m);
+               }
+           }
+           System.out.println();
+           }
+       } 
+    
+    }
+Q 
+  a 
+ a a 
+a a a 
+ a a 
+  a
+
+   class Pattern{
+    public static void main(String[] args) {
+       for(int i=1;i<=3;i++){
+           for(int s=i;s<=2;s++){
+               System.out.print(" ");
+           }
+           for(int j=1;j<=i;j++){
+               System.out.print("a"+" ");
+           }
+            System.out.println();
+           }
+           for(int n=1;n<=2;n++){
+           for(int m=1;m<=n;m++){
+               System.out.print(" ");
+           }
+          
+           for(int r=2;r>=n;r--){
+           
+               System.out.print("a"+" ");
+           }
+           System.out.println();
+       }
+    }
+
+Q
+1 
+2 5 
+3 6 8 
+4 7 9 10
+
+class Assignment {
+    public static void main(String[] args) {
+        for(int i=1;i<=4;i++){
+            int r=4, sum=i;
+            for(int j=1;j<=i;j++){
+                if(j==1)
+                {
+                    System.out.print(i+" ");
+                }
+               else{ 
+                sum=sum+r;
+                 System.out.print(sum+" ");}
+                 r--;
+            }
+            System.out.println();
+        }
+    }
+}
+
+Q
+111112
+322222
+333334
+544444
+555556
+766666
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 6; i++) {
+            if (i % 2 != 0) {
+                for (int j = 1; j < 6; j++)
+                    System.out.print(i);
+                System.out.print(i + 1);
+            }
+            if (i % 2 == 0) {
+                System.out.print(i + 1);
+                for (int j = 1; j < 6; j++)
+                    System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+
+Q
+
+111112
+322222
+333334
+544444
+555556
+777776
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 6; i++) {
+            
+            int repeatDigit = (i % 2 != 0) ? i : i +1;
+            int nextNumber = (i % 2 != 0) ? i+1 : i;
+
+            // Print repeating digit and next number
+            for (int j = 1; j <6; j++){
+                System.out.print(repeatDigit);}
+            System.out.print(nextNumber);
+
+            // Move to the next line
+            System.out.println();
+        }
+    }
+}
+
+Q4.	give choice to user
+1.+
+2.*
+3./
+4. exit
+as per user choice display result if user enter invalid choice give appropriate message.
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int choise;
+        int num1,num2;
+        num1=num2=0;
+       do{ System.out.println("Choise 1:Addition\n2:multiplication\n3:Divide\n4:Exit");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Choise");
+        choise=sc.nextInt();
+       if(choise==1||choise==2||choise==3){ //||choise==4){
+           System.out.print("num1="+" ");
+           num1=sc.nextInt();
+            System.out.print("num2="+" ");
+           num2=sc.nextInt();
+       }
+       
+       switch(choise){
+           case 1:
+               int add;
+               add=num1+num2;
+               System.out.println(add);
+               break;
+           case 2:
+               int mul;
+               mul=num1*num2;
+               System.out.println(mul);
+               break;
+            case 3:
+                float div;
+                 div= (float) num1/num2;
+                 System.out.println(div);
+                 break;
+            /*case 4:
+                System.out.println("exit");
+                System.exit(0);
+                break;*/
+            default:
+                 System.out.println("Enter Valid Choise");
+                 break;
+       }
+       System.out.println("Enter choise for continue 1 and  exit 0");
+       choise=sc.nextInt();
+       }
+       while(choise!=0);
+    }
+}
+
+
+Q3.	Accept date month and year from user and print date in formatedd-mmm-yyyy
+a.	Eg. Input 12/3/2012  o/p 12 january 2012
+
+
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+	int choise,date,month,year;
+	Scanner sc = new Scanner (System.in);
+	  System.out.println ("Enter choise");
+	  choise = sc.nextInt ();
+	  System.out.print("Enter date/month/year");
+		date = sc.nextInt();
+		//System.out.print("/");
+		month = sc.nextInt();
+		//	System.out.print("/");
+		year = sc.nextInt();
+	if (month == 1 || month == 2 || month == 3 || month == 4 || month == 5
+		|| month == 6 || month == 7 || month == 8 || month == 9 || month == 10
+		|| month == 11 || month == 12)
+	  {
+			if(date>=31||date<=0){
+		    System.out.print("enter valid date");
+		    System.exit(0);}
+		
+	  }
+	switch (choise)
+	  {
+	      default:
+	      System.out.print("Enter valid Month");
+	      break;
+	  case 1:
+		System.out.print (date +" "+"january"+year);
+		break;
+	  case 2:
+		if (year % 4 == 0)
+		  {
+			System.out.print (date+" "+"february"+year);}
+			else
+			{
+                System.out.print(date+" "+"february"+year);
+			}
+			break;
+		case 3:	
+		  System.out.print(date+" "+"march"+year);
+           	break;
+        case 4:    	
+              System.out.print(date+" "+"april"+year);
+           	break;
+          case 5:    	
+              System.out.print(date+" "+"may"+year);
+           	break; 
+         case 6:    	
+              System.out.print(date+" "+"june"+year);
+           	break;  
+         case 7:    	
+              System.out.print(date+" "+"july"+year);
+           	break;  
+          case 8:    	
+              System.out.print(date+" "+"august"+year);
+           	break;  
+          case 9:    	
+              System.out.print(date+" "+"septeber"+year);
+           	break;  	
+          case 10:    	
+              System.out.print(date+" "+"october"+year);
+           	break;
+           case 11:    	
+              System.out.print(date+" "+"november"+year);
+           	break;
+           case 12:    	
+              System.out.print(date+" "+"december"+year);
+           	break; 	
+	  }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

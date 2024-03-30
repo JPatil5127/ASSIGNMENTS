@@ -1,0 +1,427 @@
+DAY 1 - ASSIGNMENT 
+
+1) accept two numbers and add them.
+
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Num1 and Num2 :");
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		int add=num1+num2;
+		System.out.println(add);
+	}
+
+}
+
+-------------------------------------------------------------------------
+2) accept two numbers and subtract them.
+
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Num1 and Num2 :");
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		int sub=num1-num2;
+		System.out.println(sub);
+	}
+
+}
+-------------------------------------------------------------------------
+3) accept two numbers and multiply them.
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Num1 and Num2 :");
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		int mul=num1*num2;
+		System.out.println(mul);
+	}
+
+}
+-------------------------------------------------------------------------
+
+4) accept two numbers and devide them.
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	float div=(float)a/b;
+	System.out.println(div);
+	}
+}
+------------------------------------------------------------------------------------------------------------
+
+5) accept two numbers and check whether first number is greater or second number is greater or they are equal.
+
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Num1 and Num2 :");
+		int num1=sc.nextInt();
+		int num2=sc.nextInt();
+		if(num1==num2) {
+			System.out.println("Both Number Are Equal");
+		}
+		System.out.println(num1>=num2?"Num1 is  greater":"Num2 is  greater");
+		
+	}
+
+}
+--------------------------------------------------------------------------------------------------------------
+6) accept a number and check whether it is divisible by 3 or not.
+
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Num:");
+		int num=sc.nextInt();
+		if(num%3==0) {
+			System.out.println("Number is Divisible  ");
+		}
+		else {
+			System.out.println("Number is  Not Divisible");
+		}
+	}
+
+}
+-------------------------------------------------------------------------
+
+Control Flow Assignment
+
+1)	display a table of a particular number 
+
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Num:");
+		int num=sc.nextInt();
+		for(int i=1;i<=10;i++) {
+			int mul=num*i;
+			System.out.println(num+" * "+i+" = "+mul);
+		}
+	}
+
+}
+
+-----------------------------------------------------------------------------------------
+
+2)	declare two numbers and one operator as a character. e.g. '+'
+using switch... case check which operator is declared and accordingly perform the action.
+
+import java.util.*;
+public class Sample {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int choise;
+        int num1,num2;
+        num1=num2=0;
+       do{ System.out.println("Choise '+':Addition\n'-':subtraction\n'*':multiplication\n'/':Divide");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Choise");
+        choise=sc.next().charAt(0);
+       if(choise=='+'||choise=='-'||choise=='*'||choise=='/'){ 
+           System.out.print("num1="+" ");
+           num1=sc.nextInt();
+            System.out.print("num2="+" ");
+           num2=sc.nextInt();
+       }
+       
+       switch(choise){
+           case '+':
+               int add;
+               add=num1+num2;
+               System.out.println(add);
+               break;
+           case '-':
+               int sub;
+               sub=num1-num2;
+               System.out.println(sub);
+               break;
+           case '*':
+               int mul;
+               mul=num1*num2;
+               System.out.println(mul);
+               break;
+            case '/':
+                float div;
+                 div= (float) num1/num2;
+                 System.out.println(div);
+                 break;
+            default:
+                 System.out.println("Enter Valid Choise");
+                 break;
+       }
+       System.out.println("Enter choise for continue 1 and  exit 0");
+       choise=sc.nextInt();
+       }
+       while(choise!=0);
+	}
+}
+
+
+--------------------------------------------------------------------------
+
+3)	Display numbers  1 to 10 using loop
+public class Sample {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i=1;i<=10;i++) {
+			System.out.println(i);
+		}        
+	}
+}
+
+--------------------------------------------------------------------------
+
+4)	Display numbers from 3 to 30 except number 24  using loop.
+
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Start and End range");
+		int Start=sc.nextInt();
+		int End=sc.nextInt();
+		for(int num=Start; num<=End;num++) {
+			if(num==24) {
+				continue;
+			}
+			System.out.println(num);
+	}
+}
+}
+--------------------------------------------------------------------------
+
+5)  Using if…….else if….  Else,  display whether result is  fail, pass, second class , first class, Distinction etc.
+
+import java.util.*;
+public class Sample {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Marks");
+	       int mrk=sc.nextInt();
+	        if(mrk>=80){
+	            System.out.print("Distention");
+	        }
+	        else if(mrk>=60) {
+	        	  System.out.print("First Class");
+	        }
+	        else if(mrk>=50){
+	             System.out.print("Second Class");
+	        }
+	         else if(mrk>=40){
+	             System.out.print("pass");
+	        }
+	        else{
+	            System.out.print("Fail");
+	        }
+	}
+	}
+
+
+--------------------------------------------------------------------------
+6) display all prime numbers between 3 to 30
+
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Start and End range");
+		int Start=sc.nextInt();
+		int End=sc.nextInt();
+		for(int num=Start; num<=End;num++) {
+			
+			if( prime(num)){
+				System.out.println(num);
+			}
+		}		
+	}
+	public static boolean prime (int num){
+		if(num<1) {
+			return false;
+		}               //Math.sqrt(num)
+		for(int i=2;i<=num/2;i++) {
+			if(num%i==0) 
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+}
+
+
+-----------------------------------------------------------------------------------
+
+7) using nested for loop display following :
+
+A  a
+A  b
+A  c
+
+B  a
+B  b
+B  c
+
+C  a
+C  b
+C  c
+
+
+public class Sample {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	for(int i=65;i<=67;i++) {
+		for(int j=65;j<=67;j++) {
+			int ch=j+32;
+			System.out.println((char)i+"     "+(char)ch);
+		}
+		System.out.println();
+	}
+      }
+}
+
+
+
+-----------------------------------------------------------------------------------
+8) solve following patten programs:
+  
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * *   
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	for(int i=1;i<=5;i++) {
+		for(int s=i;s<=4;s++) {
+			System.out.print("  ");
+		}
+		for(int j=1;j<=i;j++) {
+			System.out.print("*"+"  ");
+		}
+		System.out.println();
+	}
+}
+}
+-----------------------------------------------------------------------------------
+
+       * * * * 
+  	* * * 
+  	 * * 
+          * 
+import java.util.*;
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	for(int i=1;i<=4;i++) {
+		for(int s=i;s>1;s--) {
+			System.out.print("  ");
+		}
+		for(int j=i;j<=4;j++) {
+			System.out.print("*"+"  ");
+		}
+		System.out.println();
+	}
+}
+}
+--------------------------------------------------------------------------------------
+    * 
+   * * 
+  * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+
+
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i=1;i<=5;i++) {
+			for(int s=i;s<=4;s++) {
+				System.out.print("  ");
+			}
+			for(int j=1;j<=i;j++) {
+				System.out.print("*"+"  ");
+			}
+			System.out.println();
+		}
+	        for(int i=1;i<=4;i++) {
+		for(int s=i;s>=1;s--) {
+			System.out.print("  ");
+		}
+		for(int j=i;j<=4;j++) {
+			System.out.print("*"+"  ");
+		}
+		System.out.println();
+	}
+	}
+}
+
+--------------------------------------------------------------------------------------
+public class Pattern{
+	public static void main(String[] args) {
+		for(int i=1;i<=4;i++){
+	        for(int j=1;j<=i;j++){
+	            System.out.print(j);
+	        }
+	        System.out.println();
+	       }
+
+	}
+}
+
+-------------------------------------------------------------------------------
+
+public class Pattern{
+	public static void main(String[] args) {
+		for(int i=1;i<=4;i++){
+	        for(int j=1;j<=i;j++){
+	            System.out.print(j);
+	        }
+	        System.out.println();
+	       }
+		for(int i=3;i>=1;i--){
+	        for(int j=1;j<=i;j++){
+	            System.out.print(j);
+	        }
+	        System.out.println();
+	       }
+	}
+}
