@@ -2296,11 +2296,569 @@ class HelloWorld {
 
     }
 }
+=======================================================================
+Main array
+1 6 3 
+4 5 2 
+7 9 8 
+Modified Array
+1 2 3 
+6 5 9 
+7 4 8 
+package Arrrays;
+
+import java.util.Scanner;
+
+public class MatrixArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] arr = { {1, 6, 3},{4,5,2},{7, 9, 8}};
+		System.out.println("Main array");
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+		int temp=0;
+        int temp1=0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (i == 0 && j == 1){
+                     temp = arr[j][i];
+                    arr[j][i] =  arr[i][j];
+                    arr[i][j] = temp;
+               
+                } 
+                else if (i == 1 && j == 2) {
+                     temp1 = arr[i][j];
+                    arr[i][j] = arr[j][i];
+                    arr[j][i] = temp;
+                    arr[0][1]=temp1;
+                }
+            }
+        }
+        //EnterChange elements
+        System.out.println("Modified Array");
+        for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr.length;j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+			}
+		
+
+}
 
    ----------------------------------------------------------------------------------------------
 
 String 
+==========================================================
+Split String by words:
+1)
+StringTokenizer st=new StringTokenizer(s," ");
+       while(st.hasMoreTokens()){
+           String w=st.nextToken();
+       }
+
+2)
+s+=' '; 
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            System.out.println(NewStr);
+            NewStr="";
+        }
+    }
 =======================================================================
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name Is Jay";
+       StringTokenizer st=new StringTokenizer(s," ");
+       while(st.hasMoreTokens()){
+           String w=st.nextToken();
+           System.out.println(w);
+       }
+    }
+}
+
+output --
+My
+Name
+Is
+Jay
+=======================================================
+Input-- My Name Is Jay
+Output -- M N I J 
+
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name Is Jay";
+    s+=' '; 
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            System.out.println(NewStr.charAt(0));
+            NewStr="";
+        }
+    }
+    }
+}
+
+OUTPUT --
+
+M
+N
+I
+J
+==========================================================
+Input-- My Name Is Jay
+Output -- My Na Is Ja 
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name Is Jay";
+    s+=' '; 
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            System.out.println(NewStr.substring(0,2));
+            NewStr="";
+        }
+    }
+    }
+}
+===========================================================================
+Input -- "My Name Is Jay"
+Output -- Jay
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name Is Jay";
+    s+=' '; 
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            if(NewStr.startsWith("J"))
+            System.out.print(NewStr);
+            NewStr="";
+        }
+    }
+    }
+}
+================================================================
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name Is Jay";
+    s+=' '; 
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            if(NewStr.endsWith("e"))
+            System.out.print(NewStr);
+            NewStr="";
+        }
+    }
+    }
+}
+====================================
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name Is Jay";
+    s+=' '; 
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            if(NewStr.length()==3)
+            System.out.print(NewStr);
+            NewStr="";
+        }
+    }
+    }
+}
+==============================================
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name is Jay";
+    s+=' '; 
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            if(NewStr.charAt(0)==(NewStr.charAt(NewStr.length()-1)))
+            System.out.print(NewStr+" ");
+            NewStr="";
+        }
+    }
+    }
+}
+==============================================================
+
+Logest Word --
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="My Name is Jay";
+    s+=' '; 
+    String LS="";
+    String NewStr="";
+    for(int i=0;i<s.length();i++){
+        char c=s.charAt(i);
+        if(c!=' '){
+            NewStr+=c;
+        }
+        else{
+            int n=NewStr.length();
+            int l=LS.length();
+            if(l<n){
+               LS=NewStr; 
+            }
+           
+            NewStr="";
+        }
+         
+    }
+    System.out.print(LS+" ");
+    }
+}
+=========================================================================
+ Count no of Words in String 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "My name is Jay";
+     String newstr="";
+     str+=" ";
+     int count=0;
+     for(int i=0 ; i<str.length();i++){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+             newstr+=ch;
+         }
+         else{
+             count++;
+         }
+     }
+     System.out.println(count);
+    
+    }
+}
+=======================================================
+
+PInLatan
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="raeeerr";
+       
+        String e="";
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+                if(i==0){
+                    e=s+"WAY";
+                }
+                else{
+                    e=s.substring(i)+s.substring(0,i)+"AY";
+                    break;
+                }
+                
+            }
+           
+        }
+         System.out.print(e);
+    }
+}
+
+
+=========================================================================
+
+Change the latter of word or replace 
+red ---> blue
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "My Favourite colour is RED";
+     String newstr="";
+     String news="";
+     str+=" ";
+     int count=0;
+     for(int i=0 ; i<str.length();i++){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+             newstr+=ch;
+         }
+         else{
+             if(newstr.equals("RED")){
+               news= news+"Blue"+" ";
+             }
+             else{
+                 news=news+newstr+" ";
+                 newstr="";
+             }
+             
+         }
+     }
+     System.out.println(news);
+    
+    }
+}
+======================================================================
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "MY NAME IS JAY";
+     String newstr="";
+     String news="";
+     str+=" ";
+    
+     int count=0;
+     for(int i=0 ; i<str.length();i++){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+             newstr+=ch;
+         }
+         else{
+            if(count++%2!=0){
+                news+=newstr.toLowerCase()+" ";
+                
+            } 
+            else{
+            news+=newstr+" ";
+         
+            }
+                newstr="";
+         }
+     }
+    System.out.println(news);
+    
+    }
+}
+=====================================================================
+
+MY NAME IS JAY
+Output ---  MY name IS jay 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "MY NAME IS JAY";
+     String newstr="";
+     String news="";
+     str+=" ";
+    
+     int count=0;
+     for(int i=0 ; i<str.length();i++){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+             newstr+=ch;
+         }
+         else{
+            if(count++%2!=0){
+                news+=newstr.toLowerCase()+" ";
+                
+            } 
+            else{
+            news+=newstr+" ";
+         
+            }
+                newstr="";
+         }
+     }
+    System.out.println(news);
+    
+    }
+}
+===========================================================================
+
+my name is jay
+MY NAME IS JAY 
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "my name is jay";
+     String newstr="";
+     String news="";
+     str+=" ";
+    
+     int count=0;
+     for(int i=0 ; i<str.length();i++){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+             newstr+=ch;
+         }
+         else{
+            
+            news+=newstr.toUpperCase()+" ";
+          newstr="";
+            }
+               
+         }
+     
+    System.out.println(news);
+    
+    }
+}
+
+============================================================================
+
+
+MY NAME IS JAY
+mY nAME iS jAY 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "MY NAME IS JAY";
+     String newstr="";
+     String news="";
+     str+=" ";
+    
+     int count=0;
+     for(int i=0 ; i<str.length();i++){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+             newstr+=ch;
+         }
+         else{
+            char c=newstr.charAt(0);
+            char s=Character.toLowerCase(c);
+            news=news+s+newstr.substring(1)+" ";
+            newstr="";
+         }
+     }
+    System.out.println(news);
+    
+    }
+}
+===============================================================
+
+MY NAME IS JAY
+YM EAMN SI YAJ 
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "MY NAME IS JAY";
+     String newstr="";
+     String news="";
+     str+=" ";
+    
+     int count=0;
+     for(int i=0 ; i<str.length();i++){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+             newstr+=ch;
+         }
+         else{
+            char c=newstr.charAt(0);
+            char s=newstr.charAt(newstr.length()-1);
+            news=news+s+newstr.substring(1,newstr.length()-1)+c+" ";
+            newstr="";
+         }
+     }
+    System.out.println(news);
+    
+    }
+}
+=============================================================================
+Logest palindrom
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     String str= "nitin hdhyfrddhh pappap";
+     String sen[]=str.split("");
+     String newstr="";
+     String ls="";
+     
+     for(int i=str.length()-1 ; i>=0;i--){
+         char ch =str.charAt(i);
+         if(ch!=' '){
+         newstr+=ch;
+         }
+         else{
+             if(str.contains(newstr)){
+                 int n=newstr.length();
+                 int l=ls.length();
+                 if(n>l){
+                     ls=newstr;
+                 }
+                 newstr="";
+             }
+         }
+          
+     }
+     System.out.println(ls);
+   
+    }
+}
+-==========================================================================
 input ----  simply
 Output----  vlpsob
 // Online Java Compiler
@@ -2326,6 +2884,7 @@ class HelloWorld {
         System.out.println(newStr);
     }
 }
+
 
 
 
